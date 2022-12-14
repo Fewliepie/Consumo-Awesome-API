@@ -1,9 +1,10 @@
 using ConsumoAPI_Dolar.Dtos;
+using ConsumoAPI_Dolar.Models;
 
 namespace ConsumoAPI_Dolar.Interfaces
 {
     public interface IMoedasService
     {
-        Task<ResponseGenerico<MoedasResponse>> BuscarMoeda(string code);
+        Task<ResponseGenerico<MoedasModel>> BuscarMoeda(string code);
     }
 }

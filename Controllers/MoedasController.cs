@@ -20,7 +20,7 @@ namespace ConsumoAPI_Dolar.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-
+        
         public async Task<ActionResult> BuscarMoeda([FromRoute] string code)
         {
             var response = await _moedasService.BuscarMoeda(code);

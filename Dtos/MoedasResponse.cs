@@ -2,26 +2,21 @@ namespace ConsumoAPI_Dolar.Dtos
 {
     public class MoedasResponse
     {
-        public string? Codigo { get; set; }
+        public USDBRL USDBRL { get; set; }
+    }
 
-        public string? Codigoem { get; set; }
-
-        public string? Nome { get; set; }
-
-        public string? Alta { get; set; }
-
-        public string? Baixa { get; set; }
-
-        public string? VarBid { get; set; }
-
-        public string? PctChange { get; set; }
-
-        public string? Bid { get; set; }
-
-        public string? Ask { get; set; }
-
-        public string? Timestamp { get; set; }
-
-        public string? CreateDate { get; set; }
+    public class USDBRL
+    {
+        public string code { get; set; }
+        public string codein { get; set; }
+        public string name { get; set; }
+        public string high { get; set; }
+        public string low { get; set; }
+        public string varBid { get; set; }
+        public string pctChange { get; set; }
+        public string bid { get; set; }
+        public string ask { get; set; }
+        public string timestamp { get; set; }
+        public string create_date { get; set; }
     }
 }
