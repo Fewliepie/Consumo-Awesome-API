@@ -1,6 +1,7 @@
 using AutoMapper;
 using ConsumoAPI_Dolar.Dtos;
 using ConsumoAPI_Dolar.Interfaces;
+using ConsumoAPI_Dolar.Models;
 
 namespace ConsumoAPI_Dolar.Services
 {
@@ -15,10 +16,11 @@ namespace ConsumoAPI_Dolar.Services
             _awesomeApi = awesomeApi;
         }
 
-        public async Task<ResponseGenerico<MoedasResponse>> BuscarMoeda(string code)
+        public async Task<ResponseGenerico<MoedasModel>> BuscarMoeda(string code)
         {
             var moeda = await _awesomeApi.BuscarMoedaPorCodigo(code);
-            return _mapper.Map<ResponseGenerico<MoedasResponse>>(moeda);
+            //return _mapper.Map<ResponseGenerico<MoedasResponse>>(moeda);
+            return moeda;
         }
     }
 }
